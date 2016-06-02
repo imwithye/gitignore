@@ -1,0 +1,58 @@
+package Symfony
+
+import "strings"
+import "github.com/imwithye/git_ignore/template"
+
+func init() {
+	ignore := []string{
+		"# Cache and logs (Symfony2)",
+		"/app/cache/*",
+		"/app/logs/*",
+		"!app/cache/.gitkeep",
+		"!app/logs/.gitkeep",
+		"",
+		"# Email spool folder",
+		"/app/spool/*",
+		"",
+		"# Cache, session files and logs (Symfony3)",
+		"/var/cache/*",
+		"/var/logs/*",
+		"/var/sessions/*",
+		"!var/cache/.gitkeep",
+		"!var/logs/.gitkeep",
+		"!var/sessions/.gitkeep",
+		"",
+		"# Parameters",
+		"/app/config/parameters.yml",
+		"/app/config/parameters.ini",
+		"",
+		"# Managed by Composer",
+		"/app/bootstrap.php.cache",
+		"/var/bootstrap.php.cache",
+		"/bin/[ /bin/bash /bin/cat /bin/chmod /bin/cp /bin/csh /bin/date /bin/dd /bin/df /bin/domainname /bin/echo /bin/ed /bin/expr /bin/hostname /bin/kill /bin/ksh /bin/launchctl /bin/link /bin/ln /bin/ls /bin/mkdir /bin/mv /bin/pax /bin/ps /bin/pwd /bin/rcp /bin/rm /bin/rmdir /bin/sh /bin/sleep /bin/stty /bin/sync /bin/tcsh /bin/test /bin/unlink /bin/wait4path /bin/zsh",
+		"!bin/console",
+		"!bin/symfony_requirements",
+		"/vendor/",
+		"",
+		"# Assets and user uploads",
+		"/web/bundles/",
+		"/web/uploads/",
+		"",
+		"# Assets managed by Bower",
+		"/web/assets/vendor/",
+		"",
+		"# PHPUnit",
+		"/app/phpunit.xml",
+		"/phpunit.xml",
+		"",
+		"# Build data",
+		"/build/",
+		"",
+		"# Composer PHAR",
+		"/composer.phar",
+		"",
+		"# Backup entities generated with doctrine:generate:entities command",
+		"*/Entity/*~",
+	}
+	template.SetTemplate("GitHub/Symfony", strings.Join(ignore, "\n"))
+}
