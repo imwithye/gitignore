@@ -18,6 +18,8 @@ cat > $PackageFile << EOF
 package template
 import (
 EOF
+
+# Generate GitHub Templates
 find gitignore-master -name '*.gitignore' | while read ignore; do
 	DirName=$(dirname $ignore)
 	FileName=$(basename $ignore)
