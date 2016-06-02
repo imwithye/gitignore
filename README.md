@@ -15,3 +15,6 @@ Git-ignore is a git plugin which allows you manage your git ignore files. Add ig
 ```Bash
 git ignore xcode python c > .gitignore
 ```
+
+## Install
+Download Git-ignore from release page and put it under your system PATH.
