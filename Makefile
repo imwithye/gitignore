@@ -1,4 +1,4 @@
-.phony: generate fmt build
+.phony: generate fmt build clean
 
 build:
 	go build -o git-ignore
@@ -11,4 +11,5 @@ fmt:
 	go fmt ./...
 
 clean:
+	git clean -xdf
 	rm git-ignore
