@@ -9,8 +9,7 @@ build:
 	env GOOS=linux GOARCH=arm go build -o git-ignore_linux_arm
 
 generate:
-	bash generate.sh
-	go fmt ./...
+	go run generator/generate.go
 
 fmt:
 	go fmt ./...

@@ -2,12 +2,17 @@ package main
 
 import (
 	"archive/zip"
+	"fmt"
 	"github.com/imwithye/logor"
 	"io"
 	"net/http"
 	"os"
 	"path/filepath"
+	"strings"
 )
+
+const PackageFolder = "template"
+const PackageName = "template"
 
 func downloadFile(filepath string, url string) (err error) {
 	out, err := os.Create(filepath)
@@ -58,16 +63,45 @@ func unzipFile(src, dest string) error {
 	return nil
 }
 
+func visitFile(path string, f os.FileInfo, err error) error {
+	if err == nil && filepath.Ext(path) == ".gitignore" {
+		generateCode(path)
+	}
+	return nil
+}
+
+func generateCode(path string) {
+	log := logor.GetLogor()
+	relPath, err := filepath.Rel("gitignore-master", path)
+	if err != nil {
+		log.Fatal("   ", err)
+		return
+	}
+	extension := filepath.Ext(relPath)
+	packagePath := filepath.Join(PackageFolder, relPath[0:len(relPath)-len(extension)])
+	packagePath = strings.ToLower(packagePath)
+	packagePath = strings.Replace(packagePath, "+", "p", -1)
+	packagePath = strings.Replace(packagePath, "-", "_", -1)
+	fmt.Println(packagePath)
+}
+
 func main() {
 	log := logor.GetLogor()
-	log.Info("--> Downloading Github Gitignore Template")
-	err := downloadFile("gitignore-master.zip", "https://codeload.github.com/github/gitignore/zip/master")
+	var err error
+	log.Info("-->", "Downloading Github Gitignore Template")
+	err = downloadFile("gitignore-master.zip", "https://codeload.github.com/github/gitignore/zip/master")
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal("-->", err)
 	}
-	log.Info("--> Extracting Github Gitignore Template")
+	log.Info("-->", "Extracting Github Gitignore Template")
 	err = unzipFile("gitignore-master.zip", ".")
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal("-->", err)
 	}
+	log.Info("-->", "Generating Go Codes & Packages")
+	err = filepath.Walk("gitignore-master", visitFile)
+	if err != nil {
+		log.Fatal("-->", err)
+	}
+	log.Info("-->", "Done")
 }
