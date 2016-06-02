@@ -11,5 +11,6 @@ fmt:
 	go fmt ./...
 
 clean:
-	git clean -xdf
+	rm *.zip
+	rm -rf gitignore-master
 	rm git-ignore
