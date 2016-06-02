@@ -17,4 +17,4 @@ git ignore xcode python c > .gitignore
 ```
 
 ## Install
-Download Git-ignore from release page and put it under your system PATH.
+Download Git-ignore from release page and put it under your system PATH. Make sure the program name is renamed to `git-ignore`.
