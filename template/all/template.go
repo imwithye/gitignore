@@ -88,7 +88,6 @@ import (
 	_ "github.com/imwithye/gitignore/template/github/Global/SlickEdit"
 	_ "github.com/imwithye/gitignore/template/github/Global/SublimeText"
 	_ "github.com/imwithye/gitignore/template/github/Global/SynopsysVCS"
-	_ "github.com/imwithye/gitignore/template/github/Global/Tags"
 	_ "github.com/imwithye/gitignore/template/github/Global/TextMate"
 	_ "github.com/imwithye/gitignore/template/github/Global/TortoiseGit"
 	_ "github.com/imwithye/gitignore/template/github/Global/Vagrant"

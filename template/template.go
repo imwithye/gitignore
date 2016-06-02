@@ -10,6 +10,11 @@ import (
 var NotExist = errors.New("ignore template does not exist")
 var template map[string]string
 
+type Template struct {
+	Ignore string
+	Path   string
+}
+
 func SetTemplate(key, val string) {
 	if template == nil {
 		template = map[string]string{}
@@ -17,16 +22,16 @@ func SetTemplate(key, val string) {
 	template[strings.ToLower(key)] = val
 }
 
-func GetTemplate(key string) (string, error) {
+func GetTemplate(key string) (Template, error) {
 	if template == nil {
-		return notExist(key), notExistError(key)
+		return Template{notExist(key), ""}, notExistError(key)
 	}
 	if path := Matchs(key); path == "" {
-		return notExist(key), notExistError(key)
+		return Template{notExist(key), ""}, notExistError(key)
 	} else if val, ok := template[path]; !ok {
-		return notExist(key), notExistError(key)
+		return Template{notExist(key), ""}, notExistError(key)
 	} else {
-		return val, nil
+		return Template{val, path}, nil
 	}
 }
 
@@ -40,9 +45,9 @@ func Matchs(k string) string {
 }
 
 func notExist(key string) string {
-	return fmt.Sprintf("# ignore template for %s does not exist", key)
+	return fmt.Sprintf("# gitignore template for %s does not exist", key)
 }
 
 func notExistError(key string) error {
-	return errors.New(fmt.Sprintf("ignore template for %s does not exist", key))
+	return errors.New(fmt.Sprintf("gitignore template for %s does not exist", key))
 }
