@@ -2,6 +2,7 @@ package template
 
 import (
 	"errors"
+	"fmt"
 	"path/filepath"
 	"strings"
 )
@@ -18,12 +19,12 @@ func SetTemplate(key, val string) {
 
 func GetTemplate(key string) (string, error) {
 	if template == nil {
-		return "", NotExist
+		return notExist(key), notExistError(key)
 	}
 	if path := Matchs(key); path == "" {
-		return "", NotExist
+		return notExist(key), notExistError(key)
 	} else if val, ok := template[path]; !ok {
-		return "", NotExist
+		return notExist(key), notExistError(key)
 	} else {
 		return val, nil
 	}
@@ -36,4 +37,12 @@ func Matchs(k string) string {
 		}
 	}
 	return ""
+}
+
+func notExist(key string) string {
+	return fmt.Sprintf("# ignore template for %s does not exist", key)
+}
+
+func notExistError(key string) error {
+	return errors.New(fmt.Sprintf("ignore template for %s does not exist", key))
 }

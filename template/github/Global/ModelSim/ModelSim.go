@@ -1,7 +1,7 @@
 package ModelSim
 
 import "strings"
-import "github.com/imwithye/git_ignore/template"
+import "github.com/imwithye/gitignore/template"
 
 func init() {
 	ignore := []string{

@@ -35,7 +35,7 @@ find gitignore-master -name '*.gitignore' | while read ignore; do
 	echo "package $(basename $ImportPath)" > "$TemplateDirName/${GoFileName}.go"
 	echo >> "$TemplateDirName/${GoFileName}.go"
 	echo "import \"strings\"" >> "$TemplateDirName/${GoFileName}.go"
-	echo "import \"github.com/imwithye/git_ignore/template\"" >> "$TemplateDirName/${GoFileName}.go"
+	echo "import \"github.com/imwithye/gitignore/template\"" >> "$TemplateDirName/${GoFileName}.go"
 	echo >> "$TemplateDirName/${GoFileName}.go"
 	echo "func init () {" >> "$TemplateDirName/${GoFileName}.go"
 	echo "	ignore := []string{" >> "$TemplateDirName/${GoFileName}.go"
@@ -47,7 +47,7 @@ find gitignore-master -name '*.gitignore' | while read ignore; do
 	echo "	}" >> "$TemplateDirName/${GoFileName}.go"
 	echo "	template.SetTemplate(\"$KeyName\", strings.Join(ignore, \"\\n\"))" >> "$TemplateDirName/${GoFileName}.go"
 	echo "}" >> "$TemplateDirName/${GoFileName}.go"
-	echo "	_ \"github.com/imwithye/git_ignore/$ImportPath\"" >> $PackageFile
+	echo "	_ \"github.com/imwithye/gitignore/$ImportPath\"" >> $PackageFile
 done
 echo ")" >> $PackageFile
 echo "--> Done"
