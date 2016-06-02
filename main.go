@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Println(template.GetTemplate("GitHub/C"))
+	fmt.Println(template.GetTemplate("Xcode"))
 }
