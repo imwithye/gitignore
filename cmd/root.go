@@ -8,7 +8,7 @@ import (
 
 var RootCmd = &cobra.Command{
 	Use:   "git-ignore",
-	Short: "A simple tool to manage your git ignore files.",
+	Short: "A simple tool to manage your git ignore files",
 }
 
 func Execute() {
