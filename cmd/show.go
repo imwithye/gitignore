@@ -25,7 +25,7 @@ var showCmd = &cobra.Command{
 			ignores = append(ignores, t.Ignore)
 		}
 		if len(ignores) > 0 {
-			fmt.Print(strings.Join(ignores, "\n\n"))
+			fmt.Print(strings.Join(ignores, "\n"))
 		}
 	},
 }
