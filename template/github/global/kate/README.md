@@ -1,4 +1,4 @@
-Git Template Global/Kate
+Git Template Global\Kate
 ===
 
 Use `git ignore add kate` to add this ignore template.

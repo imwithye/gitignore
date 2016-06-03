@@ -1,4 +1,4 @@
-Git Template Global/Ensime
+Git Template Global\Ensime
 ===
 
 Use `git ignore add ensime` to add this ignore template.

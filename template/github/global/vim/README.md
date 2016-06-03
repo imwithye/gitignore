@@ -1,4 +1,4 @@
-Git Template Global/Vim
+Git Template Global\Vim
 ===
 
 Use `git ignore add vim` to add this ignore template.

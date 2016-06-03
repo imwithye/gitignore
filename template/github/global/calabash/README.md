@@ -1,4 +1,4 @@
-Git Template Global/Calabash
+Git Template Global\Calabash
 ===
 
 Use `git ignore add calabash` to add this ignore template.

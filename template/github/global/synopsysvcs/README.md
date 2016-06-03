@@ -1,4 +1,4 @@
-Git Template Global/SynopsysVCS
+Git Template Global\SynopsysVCS
 ===
 
 Use `git ignore add synopsysvcs` to add this ignore template.

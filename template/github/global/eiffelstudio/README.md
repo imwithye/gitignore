@@ -1,4 +1,4 @@
-Git Template Global/EiffelStudio
+Git Template Global\EiffelStudio
 ===
 
 Use `git ignore add eiffelstudio` to add this ignore template.

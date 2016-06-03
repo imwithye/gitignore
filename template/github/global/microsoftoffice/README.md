@@ -1,4 +1,4 @@
-Git Template Global/MicrosoftOffice
+Git Template Global\MicrosoftOffice
 ===
 
 Use `git ignore add microsoftoffice` to add this ignore template.

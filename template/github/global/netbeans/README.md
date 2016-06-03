@@ -1,4 +1,4 @@
-Git Template Global/NetBeans
+Git Template Global\NetBeans
 ===
 
 Use `git ignore add netbeans` to add this ignore template.

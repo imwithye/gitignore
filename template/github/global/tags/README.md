@@ -1,4 +1,4 @@
-Git Template Global/Tags
+Git Template Global\Tags
 ===
 
 Use `git ignore add tags` to add this ignore template.

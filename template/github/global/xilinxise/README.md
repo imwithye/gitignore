@@ -1,4 +1,4 @@
-Git Template Global/XilinxISE
+Git Template Global\XilinxISE
 ===
 
 Use `git ignore add xilinxise` to add this ignore template.

@@ -129,12 +129,12 @@ func generateCode(path string) {
 	gocode := fmt.Sprintf(
 		GoTemplate, packageName,
 		strings.Join(ignores, "\n"),
-		strings.ToLower(filepath.Join("github", relPath[0:len(relPath)-len(extension)])))
+		strings.ToLower(strings.Replace(filepath.Join("github", relPath[0:len(relPath)-len(extension)]), "\\", "/", -1)))
 	ioutil.WriteFile(goFilePath, []byte(gocode), 0644)
 	readmeFilePath := filepath.Join(packagePath, "README.md")
 	readme := fmt.Sprintf(ReadmeTemplate, relPath[0:len(relPath)-len(extension)], packageName, string(content))
 	ioutil.WriteFile(readmeFilePath, []byte(readme), 0644)
-	importPath := "_ " + "\"" + filepath.Join("github.com/imwithye/gitignore", packagePath) + "\""
+	importPath := strings.Replace(fmt.Sprintf("_ \"github.com/imwithye/gitignore/%s\"", packagePath), "\\", "/", -1)
 	imports = append(imports, importPath)
 }
 

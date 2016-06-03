@@ -1,4 +1,4 @@
-Git Template Global/NotepadPP
+Git Template Global\NotepadPP
 ===
 
 Use `git ignore add notepadpp` to add this ignore template.

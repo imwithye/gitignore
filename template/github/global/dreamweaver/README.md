@@ -1,4 +1,4 @@
-Git Template Global/Dreamweaver
+Git Template Global\Dreamweaver
 ===
 
 Use `git ignore add dreamweaver` to add this ignore template.

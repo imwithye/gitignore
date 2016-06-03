@@ -1,4 +1,4 @@
-Git Template Global/TortoiseGit
+Git Template Global\TortoiseGit
 ===
 
 Use `git ignore add tortoisegit` to add this ignore template.

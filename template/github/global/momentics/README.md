@@ -1,4 +1,4 @@
-Git Template Global/Momentics
+Git Template Global\Momentics
 ===
 
 Use `git ignore add momentics` to add this ignore template.

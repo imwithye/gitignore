@@ -1,4 +1,4 @@
-Git Template Global/Otto
+Git Template Global\Otto
 ===
 
 Use `git ignore add otto` to add this ignore template.

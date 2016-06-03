@@ -1,4 +1,4 @@
-Git Template Global/Eclipse
+Git Template Global\Eclipse
 ===
 
 Use `git ignore add eclipse` to add this ignore template.

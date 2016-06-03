@@ -1,4 +1,4 @@
-Git Template Global/ModelSim
+Git Template Global\ModelSim
 ===
 
 Use `git ignore add modelsim` to add this ignore template.

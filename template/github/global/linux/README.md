@@ -1,4 +1,4 @@
-Git Template Global/Linux
+Git Template Global\Linux
 ===
 
 Use `git ignore add linux` to add this ignore template.

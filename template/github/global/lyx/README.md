@@ -1,4 +1,4 @@
-Git Template Global/LyX
+Git Template Global\LyX
 ===
 
 Use `git ignore add lyx` to add this ignore template.

@@ -1,4 +1,4 @@
-Git Template Global/OSX
+Git Template Global\OSX
 ===
 
 Use `git ignore add osx` to add this ignore template.
