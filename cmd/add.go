@@ -12,7 +12,7 @@ import (
 var addCmdQuite, addCmdVerbose bool
 var addCmd = &cobra.Command{
 	Use:   "add [templates]",
-	Short: "Add multi git gitignore templates to .gitignore",
+	Short: "Add multi gitignore templates to .gitignore",
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) < 1 {
 			cmd.Help()
