@@ -13,8 +13,6 @@ import (
 )
 
 const PackageFolder = "template"
-const PackageName = "template"
-
 const GoTemplate = `package %s
 
 import (

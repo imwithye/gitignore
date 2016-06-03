@@ -1,6 +1,10 @@
-.phony: generate fmt build clean
+.PHONY: build build_all generate fmt clean
 
 build:
+	mkdir -p build
+	go build -o build/git-ignore
+
+build_all:
 	mkdir -p build
 	env GOOS=darwin GOARCH=amd64 go build -o build/git-ignore_darwin_amd64
 	env GOOS=windows GOARCH=amd64 go build -o build/git-ignore_windows_amd64.exe
@@ -11,11 +15,11 @@ build:
 
 generate:
 	go run generator/generate.go
+	make fmt
 
 fmt:
 	go fmt ./...
 
 clean:
-	rm *.zip
+	rm -rf *.zip git-ignore
 	rm -rf gitignore-master build
-	rm git-ignore_*
