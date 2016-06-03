@@ -53,7 +53,7 @@ func init() {
 		"",
 		"# fastlane",
 		"#",
-		"# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the ",
+		"# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the",
 		"# screenshots whenever they are needed.",
 		"# For more information about the recommended setup visit:",
 		"# https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Gitignore.md",

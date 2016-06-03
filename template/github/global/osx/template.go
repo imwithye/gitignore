@@ -12,7 +12,7 @@ func init() {
 		".LSOverride",
 		"",
 		"# Icon must end with two \\r",
-		"Icon",
+		"Icon",
 		"",
 		"# Thumbnails",
 		"._*",

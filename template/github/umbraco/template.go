@@ -24,7 +24,7 @@ func init() {
 		"!**/App_Data/[Pp]ackages/",
 		"!**/[Uu]mbraco/[Dd]eveloper/[Pp]ackages",
 		"",
-		"# ImageProcessor DiskCache ",
+		"# ImageProcessor DiskCache",
 		"**/App_Data/cache/",
 		"",
 	}

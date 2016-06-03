@@ -7,8 +7,8 @@ import (
 
 func init() {
 	ignore := []string{
-		"# Notepad++ backups #",
-		"*.bak",
+		"# Notepad++ backups #",
+		"*.bak",
 		"",
 	}
 	template.Add("github/global/notepadpp", strings.Join(ignore, "\n"))

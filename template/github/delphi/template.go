@@ -29,7 +29,7 @@ func init() {
 		"# Deployment Manager configuration file for your project. Added in Delphi XE2.",
 		"# Uncomment this if it is not mobile development and you do not use remote debug feature.",
 		"#*.deployproj",
-		"# ",
+		"#",
 		"# C++ object files produced when C/C++ Output file generation is configured.",
 		"# Uncomment this if you are not using external objects (zlib library for example).",
 		"#*.obj",
