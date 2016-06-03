@@ -13,8 +13,35 @@ Or even worse, you edit your git ignore file every time. You may use `git init -
 Git-ignore is a git plugin which allows you manage your git ignore files. Add ignore file to current project by using
 
 ```Bash
-git ignore xcode python c > .gitignore
+git ignore add python c java c++ objective-c
 ```
 
-## Install
-Download Git-ignore from release page and put it under your system PATH. Make sure the program name is renamed to `git-ignore`.
+Ignore files relate to Python C and Java will be added into `.gitignore` file. Git-ignore use [GitHub gitignore template](http://github.com/github/gitignore) as submodule. There are lots of language ignore files in this repository. You don't  have to create your own template. Just start using it!
+
+Sure, of course Git-ignore provides a way to manage your own templates:).
+
+##Install
+
+Simply download the binary file from [release](https://github.com/imwithye/gitignore/releases), rename it to `git-ignore` and add it to your system path. You are ready to go.
+
+##Uninstall
+
+Simply delete the binary from your system.
+
+##Usage
+
+Try `git ignore -h`. It will out put some useful information.
+
+###Add ignore
+
+```Bash
+git ignore add python java c
+```
+
+`git ignore add <templates>`, this command allows you add multi git gitignore templates to `.gitignore`.
+
+###See which file will be added
+
+```Bash
+git ignore which python java
+```
