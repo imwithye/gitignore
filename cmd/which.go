@@ -8,7 +8,7 @@ import (
 )
 
 var whichCmd = &cobra.Command{
-	Use:   "which",
+	Use:   "which [templates]",
 	Short: "Show which ignore templates will be added",
 	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) < 1 {

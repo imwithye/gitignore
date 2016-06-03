@@ -2,7 +2,7 @@
 
 build:
 	mkdir -p build
-	go build -o build/git-ignore
+	go build
 
 build_all:
 	mkdir -p build

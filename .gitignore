@@ -1,3 +1,5 @@
 gitignore-master.zip
 gitignore-master/
 build/
+*.exe
+gitignore
