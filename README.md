@@ -1,5 +1,7 @@
 Git-ignore
 ===
+[![Build Status](https://travis-ci.org/imwithye/gitignore.svg?branch=master)](https://travis-ci.org/imwithye/gitignore)
+
 Are you tired of managing your git ignore files? You probably work in this way
 
 ```Bash
