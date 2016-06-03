@@ -1,0 +1,13 @@
+Git Template CodeIgniter
+===
+
+Use `git ignore add codeigniter` to add this ignore template.
+
+```
+*/config/development
+*/logs/log-*.php
+!*/logs/index.html
+*/cache/*
+!*/cache/index.html
+!*/cache/.htaccess
+```

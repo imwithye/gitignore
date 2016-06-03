@@ -20,7 +20,7 @@ var addCmd = &cobra.Command{
 		}
 		ignores := []string{}
 		for _, arg := range args {
-			t, err := template.GetTemplate(arg)
+			t, err := template.Get(arg)
 			if err != nil {
 				if addCmdQuite {
 					continue

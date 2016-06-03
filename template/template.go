@@ -15,14 +15,14 @@ type Template struct {
 	Path   string
 }
 
-func SetTemplate(key, val string) {
+func Add(key, val string) {
 	if template == nil {
 		template = map[string]string{}
 	}
 	template[strings.ToLower(key)] = val
 }
 
-func GetTemplate(key string) (Template, error) {
+func Get(key string) (Template, error) {
 	if template == nil {
 		return Template{notExist(key), ""}, notExistError(key)
 	}

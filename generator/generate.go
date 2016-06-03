@@ -24,13 +24,20 @@ import (
 
 func init() {
 	ignore := []string{
-		%s
+%s
 	}
 	template.Add("%s", strings.Join(ignore, "\n"))
 }
 `
-
 const ReadmeTemplate = "Git Template %s\n===\n\nUse `git ignore add %s` to add this ignore template.\n\n```\n%s```\n"
+const AllTemplate = `package %s
+
+import (
+%s
+)
+`
+
+var imports = []string{}
 
 func downloadFile(filepath string, url string) (err error) {
 	out, err := os.Create(filepath)
@@ -99,7 +106,7 @@ func generateCode(path string) {
 	for _, line := range strings.Split(string(content), "\n") {
 		line = strings.Replace(line, "\\", "\\\\", -1)
 		line = strings.Replace(line, "\"", "\\\"", -1)
-		ignores = append(ignores, fmt.Sprintf("\"%s\",", line))
+		ignores = append(ignores, fmt.Sprintf("\t\t\"%s\",", line))
 	}
 	relPath, err := filepath.Rel("gitignore-master", path)
 	if err != nil {
@@ -112,6 +119,9 @@ func generateCode(path string) {
 	packagePath = strings.Replace(packagePath, "+", "p", -1)
 	packagePath = strings.Replace(packagePath, "-", "_", -1)
 	packageName := filepath.Base(packagePath)
+	if packageName == "go" {
+		packageName = "golang"
+	}
 	err = os.MkdirAll(packagePath, 0755)
 	if err != nil {
 		log.Error("   ", err)
@@ -126,8 +136,8 @@ func generateCode(path string) {
 	readmeFilePath := filepath.Join(packagePath, "README.md")
 	readme := fmt.Sprintf(ReadmeTemplate, relPath[0:len(relPath)-len(extension)], packageName, string(content))
 	ioutil.WriteFile(readmeFilePath, []byte(readme), 0644)
-	// importPath := filepath.Join("github.com/imwithye/gitignore", packagePath)
-	fmt.Println(packagePath)
+	importPath := "_ " + "\"" + filepath.Join("github.com/imwithye/gitignore", packagePath) + "\""
+	imports = append(imports, importPath)
 }
 
 func main() {
@@ -152,15 +162,28 @@ func main() {
 		log.Fatal("-->", err)
 	}
 	log.Info("-->", "Generating Go Codes & Packages")
-	err = os.RemoveAll("template/github")
+	err = os.RemoveAll(filepath.Join(PackageFolder, "github"))
 	if err != nil {
 		log.Fatal("-->", err)
 	}
-	err = os.RemoveAll("template/all")
+	err = os.RemoveAll(filepath.Join(PackageFolder, "all"))
 	if err != nil {
 		log.Fatal("-->", err)
 	}
 	err = filepath.Walk("gitignore-master", visitFile)
+	if err != nil {
+		log.Fatal("-->", err)
+	}
+	allPath := filepath.Join(PackageFolder, "all")
+	err = os.MkdirAll(allPath, 0755)
+	if err != nil {
+		log.Fatal("-->", err)
+	}
+	allPath = filepath.Join(PackageFolder, "all", "all.go")
+	err = ioutil.WriteFile(
+		allPath,
+		[]byte(fmt.Sprintf(AllTemplate, "all", strings.Join(imports, "\n"))),
+		0644)
 	if err != nil {
 		log.Fatal("-->", err)
 	}

@@ -16,7 +16,7 @@ var whichCmd = &cobra.Command{
 			return
 		}
 		for _, arg := range args {
-			t, err := template.GetTemplate(arg)
+			t, err := template.Get(arg)
 			if err != nil {
 				fmt.Println("*", err)
 				continue
