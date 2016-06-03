@@ -38,7 +38,7 @@ Try `git ignore -h`. It will out put some useful information.
 git ignore add python java c
 ```
 
-`git ignore add <templates>`, this command allows you add multi git gitignore templates to `.gitignore`.
+This command will add multi git gitignore templates to `.gitignore`.
 
 ###See which file will be added
 
