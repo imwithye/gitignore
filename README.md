@@ -47,3 +47,9 @@ This command will add multi git gitignore templates to `.gitignore`.
 ```Bash
 git ignore which python java
 ```
+
+###See what will be added
+
+```Bash
+git ignore show python java
+```
