@@ -7,7 +7,19 @@ import (
 
 func init() {
 	ignore := []string{
-		"Leiningen.gitignore",
+		"pom.xml",
+		"pom.xml.asc",
+		"*jar",
+		"/lib/",
+		"/classes/",
+		"/target/",
+		"/checkouts/",
+		".lein-deps-sum",
+		".lein-repl-history",
+		".lein-plugins/",
+		".lein-failures",
+		".nrepl-port",
+		"",
 	}
 	template.Add("github/clojure", strings.Join(ignore, "\n"))
 }

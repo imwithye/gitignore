@@ -93,9 +93,25 @@ func visitFile(path string, f os.FileInfo, err error) error {
 	return nil
 }
 
+func symbolic(path string) string {
+	log := logor.GetLogor()
+	baseName := filepath.Base(path)
+	dir := filepath.Dir(path)
+	switch baseName {
+	case "Fortran.gitignore":
+		log.Info("   ", "rewrite path", path, "to", filepath.Join(dir, "C++.gitignore"))
+		return filepath.Join(dir, "C++.gitignore")
+	case "Clojure.gitignore":
+		log.Info("   ", "rewrite path", path, "to", filepath.Join(dir, "Leiningen.gitignore"))
+		return filepath.Join(dir, "Leiningen.gitignore")
+	default:
+		return path
+	}
+}
+
 func generateCode(path string) {
 	log := logor.GetLogor()
-	content, err := ioutil.ReadFile(path)
+	content, err := ioutil.ReadFile(symbolic(path))
 	if err != nil {
 		log.Error("   ", err)
 		return
