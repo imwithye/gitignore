@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"fmt"
+	"github.com/imwithye/gitignore/cmd/platform"
 	"github.com/spf13/cobra"
 )
 
@@ -9,7 +10,7 @@ var versionCmd = &cobra.Command{
 	Use:   "version",
 	Short: "Show version",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("v0.3.0, Ciel <me@ciel.im>")
+		fmt.Printf("%s, %s, %s\n", "v0.3.0", platform.Platform, "Ciel <me@ciel.im>")
 	},
 }
 
