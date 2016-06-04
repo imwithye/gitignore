@@ -1,3 +1,5 @@
 package platform
 
-const Platform = "linux_arm"
+func init() {
+	Platform = "linux_arm"
+}

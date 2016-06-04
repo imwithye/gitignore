@@ -1,3 +1,5 @@
 package platform
 
-const Platform = "drawin_amd64"
+func init() {
+	Platform = "drawin_amd64"
+}

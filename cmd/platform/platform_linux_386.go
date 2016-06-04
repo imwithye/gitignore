@@ -1,3 +1,5 @@
 package platform
 
-const Platform = "linux_386"
+func init() {
+	Platform = "linux_386"
+}

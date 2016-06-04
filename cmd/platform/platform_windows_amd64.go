@@ -1,3 +1,5 @@
 package platform
 
-const Platform = "windows_amd64"
+func init() {
+	Platform = "windows_amd64"
+}
