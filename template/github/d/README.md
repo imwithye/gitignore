@@ -24,4 +24,8 @@ Use `git ignore add d` to add this ignore template.
 .dub
 docs.json
 __dummy.html
+docs/
+
+# Code coverage
+*.lst
 ```

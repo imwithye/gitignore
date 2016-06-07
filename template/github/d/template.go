@@ -27,6 +27,10 @@ func init() {
 		".dub",
 		"docs.json",
 		"__dummy.html",
+		"docs/",
+		"",
+		"# Code coverage",
+		"*.lst",
 		"",
 	}
 	template.Add("github/d", strings.Join(ignore, "\n"))
