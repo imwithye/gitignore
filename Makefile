@@ -16,6 +16,7 @@ build_all:
 generate:
 	go run generator/generate.go
 	make fmt
+	git status
 
 fmt:
 	go fmt ./...
