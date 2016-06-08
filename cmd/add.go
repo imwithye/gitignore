@@ -36,7 +36,7 @@ var addCmd = &cobra.Command{
 		if len(ignores) > 0 {
 			ioutil.WriteFile(".gitignore", []byte(strings.Join(ignores, "\n")), 0644)
 		} else if !addCmdQuite {
-			fmt.Println("*", "nothing will be added")
+			fmt.Println("Nothing will be added.")
 		}
 	},
 }
