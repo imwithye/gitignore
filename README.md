@@ -26,6 +26,11 @@ Sure, of course Git-ignore provides a way to manage your own templates:).
 
 Simply download the binary file from [release](https://github.com/imwithye/gitignore/releases), rename it to `git-ignore` and add it to your system path. You are ready to go.
 
+macOS user can install `git-ignore` via `Homebrew`
+```bash
+brew install imwithye/formula/git-ignore
+```
+
 ##Uninstall
 
 Simply delete the binary from your system.
