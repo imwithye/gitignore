@@ -18,7 +18,7 @@ type Version struct {
 	Patch int
 }
 
-var CurrentVersion = Version{1, 0, 2}
+var CurrentVersion = Version{1, 0, 3}
 
 func (v Version) String() string {
 	return fmt.Sprintf("v%d.%d.%d", v.Major, v.Minor, v.Patch)
