@@ -1,5 +1,5 @@
 package platform
 
 func init() {
-	Platform = "drawin_amd64"
+	Platform = "darwin_amd64"
 }
