@@ -1,4 +1,4 @@
-Git Template Global\MonoDevelop
+Git Template Global/MonoDevelop
 ===
 
 Use `git ignore add monodevelop` to add this ignore template.

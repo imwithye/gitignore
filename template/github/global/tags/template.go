@@ -23,7 +23,6 @@ func init() {
 		"cscope.in.out",
 		"cscope.po.out",
 		"",
-		"",
 	}
 	template.Add("github/global/tags", strings.Join(ignore, "\n"))
 }

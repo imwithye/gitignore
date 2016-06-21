@@ -1,4 +1,4 @@
-Git Template Global\Windows
+Git Template Global/Windows
 ===
 
 Use `git ignore add windows` to add this ignore template.

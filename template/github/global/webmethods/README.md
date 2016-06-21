@@ -1,4 +1,4 @@
-Git Template Global\WebMethods
+Git Template Global/WebMethods
 ===
 
 Use `git ignore add webmethods` to add this ignore template.

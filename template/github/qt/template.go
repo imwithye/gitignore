@@ -43,8 +43,7 @@ func init() {
 		"*.qmlproject.user.*",
 		"",
 		"# QtCtreator CMake",
-		"CMakeLists.txt.user",
-		"",
+		"CMakeLists.txt.user*",
 		"",
 	}
 	template.Add("github/qt", strings.Join(ignore, "\n"))

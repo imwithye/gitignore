@@ -1,4 +1,4 @@
-Git Template Global\Anjuta
+Git Template Global/Anjuta
 ===
 
 Use `git ignore add anjuta` to add this ignore template.

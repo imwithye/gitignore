@@ -28,7 +28,6 @@ func init() {
 		"data/DoctrineORMModule/Proxy/",
 		"data/DoctrineORMModule/cache/",
 		"",
-		"",
 		"# Legacy ZF1",
 		"demos/",
 		"extras/documentation",

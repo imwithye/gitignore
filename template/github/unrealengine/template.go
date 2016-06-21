@@ -46,6 +46,7 @@ func init() {
 		"*.suo",
 		"*.opensdf",
 		"*.sdf",
+		"*.VC.db",
 		"*.VC.opendb",
 		"",
 		"# Precompiled Assets",

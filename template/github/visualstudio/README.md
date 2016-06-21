@@ -48,6 +48,7 @@ dlldata.c
 
 # DNX
 project.lock.json
+project.fragment.lock.json
 artifacts/
 
 *_i.c

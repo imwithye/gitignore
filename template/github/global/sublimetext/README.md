@@ -1,4 +1,4 @@
-Git Template Global\SublimeText
+Git Template Global/SublimeText
 ===
 
 Use `git ignore add sublimetext` to add this ignore template.

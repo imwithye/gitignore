@@ -1,4 +1,4 @@
-Git Template Global\IPythonNotebook
+Git Template Global/IPythonNotebook
 ===
 
 Use `git ignore add ipythonnotebook` to add this ignore template.

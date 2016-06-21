@@ -48,7 +48,6 @@ func init() {
 		"*.x86_64",
 		"*.hex",
 		"",
-		"",
 	}
 	template.Add("github/lua", strings.Join(ignore, "\n"))
 }

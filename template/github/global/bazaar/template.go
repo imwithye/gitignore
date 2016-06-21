@@ -1,4 +1,4 @@
-package gpg
+package bazaar
 
 import (
 	"github.com/imwithye/gitignore/template"
@@ -7,8 +7,9 @@ import (
 
 func init() {
 	ignore := []string{
-		"secring.*",
+		".bzr/",
+		".bzrignore",
 		"",
 	}
-	template.Add("github/global/gpg", strings.Join(ignore, "\n"))
+	template.Add("github/global/bazaar", strings.Join(ignore, "\n"))
 }

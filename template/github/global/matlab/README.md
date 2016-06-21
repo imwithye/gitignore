@@ -1,4 +1,4 @@
-Git Template Global\Matlab
+Git Template Global/Matlab
 ===
 
 Use `git ignore add matlab` to add this ignore template.

@@ -1,4 +1,4 @@
-Git Template Global\Xcode
+Git Template Global/Xcode
 ===
 
 Use `git ignore add xcode` to add this ignore template.

@@ -51,7 +51,6 @@ func init() {
 		"# file locks introduced since 7.x",
 		"*.lck",
 		"",
-		"",
 	}
 	template.Add("github/eagle", strings.Join(ignore, "\n"))
 }

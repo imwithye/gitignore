@@ -40,6 +40,6 @@ Makefile*
 *.qmlproject.user.*
 
 # QtCtreator CMake
-CMakeLists.txt.user
+CMakeLists.txt.user*
 
 ```

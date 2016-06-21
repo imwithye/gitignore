@@ -43,6 +43,7 @@ Use `git ignore add unrealengine` to add this ignore template.
 *.suo
 *.opensdf
 *.sdf
+*.VC.db
 *.VC.opendb
 
 # Precompiled Assets

@@ -25,7 +25,6 @@ func init() {
 		"/sitemap.xml",
 		"/sitemap.xml.gz",
 		"",
-		"",
 	}
 	template.Add("github/wordpress", strings.Join(ignore, "\n"))
 }

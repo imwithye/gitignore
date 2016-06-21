@@ -7,7 +7,6 @@ import (
 
 func init() {
 	ignore := []string{
-		"",
 		"# .v4p backup files",
 		"*~.xml",
 		"",

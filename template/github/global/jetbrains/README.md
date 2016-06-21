@@ -1,4 +1,4 @@
-Git Template Global\JetBrains
+Git Template Global/JetBrains
 ===
 
 Use `git ignore add jetbrains` to add this ignore template.

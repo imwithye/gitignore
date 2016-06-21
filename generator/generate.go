@@ -117,10 +117,17 @@ func generateCode(path string) {
 		return
 	}
 	ignores := []string{}
-	for _, line := range strings.Split(string(content), "\n") {
+	for idx, line := range strings.Split(string(content), "\n") {
 		line = strings.Replace(line, "\\", "\\\\", -1)
 		line = strings.Replace(line, "\"", "\\\"", -1)
-		ignores = append(ignores, fmt.Sprintf("\t\t\"%s\",", strings.Trim(line, " ")))
+		line = fmt.Sprintf("\t\t\"%s\",", strings.Trim(line, " "))
+		if line == "\t\t\"\"," {
+			if idx >= 1 && ignores[len(ignores)-1] != "\t\t\"\"," {
+				ignores = append(ignores, line)
+			}
+		} else {
+			ignores = append(ignores, line)
+		}
 	}
 	if ignores[len(ignores)-1] != "" {
 		ignores = append(ignores, "")

@@ -1,4 +1,4 @@
-Git Template Global\Emacs
+Git Template Global/Emacs
 ===
 
 Use `git ignore add emacs` to add this ignore template.

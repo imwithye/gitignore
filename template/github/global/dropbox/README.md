@@ -1,4 +1,4 @@
-Git Template Global\Dropbox
+Git Template Global/Dropbox
 ===
 
 Use `git ignore add dropbox` to add this ignore template.

@@ -51,6 +51,7 @@ func init() {
 		"",
 		"# DNX",
 		"project.lock.json",
+		"project.fragment.lock.json",
 		"artifacts/",
 		"",
 		"*_i.c",

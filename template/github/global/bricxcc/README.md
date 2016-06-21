@@ -1,4 +1,4 @@
-Git Template Global\BricxCC
+Git Template Global/BricxCC
 ===
 
 Use `git ignore add bricxcc` to add this ignore template.

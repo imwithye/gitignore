@@ -1,4 +1,4 @@
-Git Template Global\JDeveloper
+Git Template Global/JDeveloper
 ===
 
 Use `git ignore add jdeveloper` to add this ignore template.

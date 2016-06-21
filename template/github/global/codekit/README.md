@@ -1,4 +1,4 @@
-Git Template Global\CodeKit
+Git Template Global/CodeKit
 ===
 
 Use `git ignore add codekit` to add this ignore template.

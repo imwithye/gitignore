@@ -45,6 +45,7 @@ import (
 	_ "github.com/imwithye/gitignore/template/github/gitbook"
 	_ "github.com/imwithye/gitignore/template/github/global/anjuta"
 	_ "github.com/imwithye/gitignore/template/github/global/archives"
+	_ "github.com/imwithye/gitignore/template/github/global/bazaar"
 	_ "github.com/imwithye/gitignore/template/github/global/bricxcc"
 	_ "github.com/imwithye/gitignore/template/github/global/calabash"
 	_ "github.com/imwithye/gitignore/template/github/global/cloud9"

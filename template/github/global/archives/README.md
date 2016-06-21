@@ -1,4 +1,4 @@
-Git Template Global\Archives
+Git Template Global/Archives
 ===
 
 Use `git ignore add archives` to add this ignore template.

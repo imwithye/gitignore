@@ -1,4 +1,4 @@
-Git Template Global\SBT
+Git Template Global/SBT
 ===
 
 Use `git ignore add sbt` to add this ignore template.

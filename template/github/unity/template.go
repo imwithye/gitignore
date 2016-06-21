@@ -27,7 +27,6 @@ func init() {
 		"*.booproj",
 		"*.svd",
 		"",
-		"",
 		"# Unity3D generated meta files",
 		"*.pidb.meta",
 		"",

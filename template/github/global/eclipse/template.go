@@ -7,7 +7,6 @@ import (
 
 func init() {
 	ignore := []string{
-		"",
 		".metadata",
 		"bin/",
 		"tmp/",

@@ -1,4 +1,4 @@
-Git Template Global\VirtualEnv
+Git Template Global/VirtualEnv
 ===
 
 Use `git ignore add virtualenv` to add this ignore template.

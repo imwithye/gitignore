@@ -1,4 +1,4 @@
-Git Template Global\Cloud9
+Git Template Global/Cloud9
 ===
 
 Use `git ignore add cloud9` to add this ignore template.

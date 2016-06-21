@@ -1,4 +1,4 @@
-Git Template Global\SlickEdit
+Git Template Global/SlickEdit
 ===
 
 Use `git ignore add slickedit` to add this ignore template.

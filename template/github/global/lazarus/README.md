@@ -1,4 +1,4 @@
-Git Template Global\Lazarus
+Git Template Global/Lazarus
 ===
 
 Use `git ignore add lazarus` to add this ignore template.
