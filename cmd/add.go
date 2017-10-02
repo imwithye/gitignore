@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-var addCmdQuite, addCmdVerbose bool
+var addCmdQuiet, addCmdVerbose bool
 var addCmd = &cobra.Command{
 	Use:   "add [templates]",
 	Short: "Add multi gitignore templates to .gitignore",
@@ -22,20 +22,20 @@ var addCmd = &cobra.Command{
 		for _, arg := range args {
 			t, err := template.Get(arg)
 			if err != nil {
-				if addCmdQuite {
+				if addCmdQuiet {
 					continue
 				}
 				fmt.Println("*", err)
 				continue
 			}
-			if !addCmdQuite && addCmdVerbose {
+			if !addCmdQuiet && addCmdVerbose {
 				fmt.Println("-", t.Path)
 			}
 			ignores = append(ignores, t.Ignore)
 		}
 		if len(ignores) > 0 {
 			ioutil.WriteFile(".gitignore", []byte(strings.Join(ignores, "\n")), 0644)
-		} else if !addCmdQuite {
+		} else if !addCmdQuiet {
 			fmt.Println("Nothing will be added.")
 		}
 	},
@@ -43,6 +43,6 @@ var addCmd = &cobra.Command{
 
 func init() {
 	RootCmd.AddCommand(addCmd)
-	addCmd.Flags().BoolVarP(&addCmdQuite, "quite", "q", false, "quite mode")
+	addCmd.Flags().BoolVarP(&addCmdQuiet, "quite", "q", false, "quiet mode")
 	addCmd.Flags().BoolVarP(&addCmdVerbose, "verbose", "v", false, "verbose mode")
 }
