@@ -20,7 +20,7 @@ git ignore add python c java c++ objective-c
 
 Ignore files relate to Python C and Java will be added into `.gitignore` file. Git-ignore use [GitHub gitignore template](http://github.com/github/gitignore) as submodule. There are lots of language ignore files in this repository. You don't  have to create your own template. Just start using it!
 
-##Install
+## Install
 
 Simply download the binary file from [release](https://github.com/imwithye/gitignore/releases), rename it to `git-ignore` and add it to your system path. You are ready to go.
 
@@ -29,15 +29,15 @@ macOS user can install `git-ignore` via `Homebrew`
 brew install imwithye/formula/git-ignore
 ```
 
-##Uninstall
+## Uninstall
 
 Simply delete the binary from your system.
 
-##Usage
+## Usage
 
 Try `git ignore -h`. It will out put some useful information.
 
-###Add ignore
+### Add ignore
 
 ```Bash
 git ignore add python java c
@@ -45,13 +45,13 @@ git ignore add python java c
 
 This command will add multi git gitignore templates to `.gitignore`.
 
-###See which file will be added
+### See which file will be added
 
 ```Bash
 git ignore which python java
 ```
 
-###See what will be added
+### See what will be added
 
 ```Bash
 git ignore show python java
