@@ -43,6 +43,6 @@ var addCmd = &cobra.Command{
 
 func init() {
 	RootCmd.AddCommand(addCmd)
-	addCmd.Flags().BoolVarP(&addCmdQuiet, "quite", "q", false, "quiet mode")
+	addCmd.Flags().BoolVarP(&addCmdQuiet, "quiet", "q", false, "quiet mode")
 	addCmd.Flags().BoolVarP(&addCmdVerbose, "verbose", "v", false, "verbose mode")
 }
