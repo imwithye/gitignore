@@ -3,6 +3,7 @@ package main
 import (
 	"embed"
 	"fmt"
+	"gitignore/args"
 	"io/fs"
 	"io/ioutil"
 	"os"
@@ -80,9 +81,9 @@ func fuzzyMatch(arg string, all IgnoreFiles) *IgnoreFile {
 }
 
 func main() {
-	args := os.Args[1:]
+	args.Parse()
 	matches := []string{}
-	for _, arg := range args {
+	for _, arg := range *args.Templates {
 		f := fuzzyMatch(arg, getAllIgnores())
 		if f == nil {
 			continue
@@ -93,6 +94,11 @@ func main() {
 		fmt.Fprintf(os.Stderr, "No gitignore template found.\n")
 		return
 	}
-	fmt.Printf("Gitignore of [%s] writes to .gitignore file.\n", strings.Join(matches, ", "))
-	ioutil.WriteFile(".gitignore", []byte(gitignore(matches)), 0666)
+	output := strings.TrimSpace(*args.Outfile)
+	if output == "-" {
+		fmt.Println(gitignore(matches))
+		return
+	}
+	fmt.Printf("Gitignore of [%s] writes to %s file.\n", strings.Join(matches, ", "), output)
+	ioutil.WriteFile(output, []byte(gitignore(matches)), 0666)
 }
